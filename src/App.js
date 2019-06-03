@@ -1,50 +1,37 @@
-import React, { Component } from "react"
-import logo from "./logo.svg"
-import "./App.css"
+import React from 'react';
 
-class LambdaDemo extends Component {
-  constructor(props) {
-    super(props)
-    this.state = { loading: false, msg: null }
-  }
+import Contact from './myportfolio/content/contact/Contact';
+import Home from './myportfolio/Home';
 
-  handleClick = api => e => {
-    e.preventDefault()
+import './myportfolio/responsive.scss';
+//import Navbur from './myportfolio/header/Navbur';
 
-    this.setState({ loading: true })
-    fetch("/.netlify/functions/" + api)
-      .then(response => response.json())
-      .then(json => this.setState({ loading: false, msg: json.msg }))
-  }
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import './App.css';
 
-  render() {
-    const { loading, msg } = this.state
-
-    return (
-      <p>
-        <button onClick={this.handleClick("hello")}>{loading ? "Loading..." : "Call Lambda"}</button>
-        <button onClick={this.handleClick("async-dadjoke")}>{loading ? "Loading..." : "Call Async Lambda"}</button>
-        <br />
-        <span>{msg}</span>
-      </p>
-    )
-  }
+function App() {
+	redirectToRealRoute();
+	return (
+		<Router>
+			<Route path="/" exact component={Home} />
+			<Route path="/contact" component={Contact} />
+		</Router>
+	);
 }
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <LambdaDemo />
-        </header>
-      </div>
-    )
-  }
-}
+export default App;
 
-export default App
+//url control
+
+const redirectToRealRoute = () => {
+	let routes = [ '/', '/contact', '/404' ];
+	let path = document.location.pathname;
+	if (!routes.includes(path)) {
+		let origin = document.location.origin;
+		let newUrl = unkownPathHandler();
+		document.location.href = origin + newUrl;
+	}
+	return true;
+};
+
+const unkownPathHandler = () => '/';
