@@ -9,7 +9,7 @@ const Thumbnails = [
 const Links = [ 'https://codepen.io/hqshtag/full/zQjNba', 'https://codepen.io/hqshtag/full/zQjNba', '#', '#' ];
 const Disc = [
 	'Animated signin/signup form made with html/css/js',
-	'This is my own simple contact form',
+	'Simple yet very efficient',
 	'Looking forward to showcase your project.',
 	'Under construction'
 ];
