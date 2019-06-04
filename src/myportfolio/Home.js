@@ -76,7 +76,7 @@ const Home = () => {
 		>
 			<div id="outer-container">
 				<Menu pageWrapId={'page-wrap'} outerContainerId={'outer-container'} styles={styles}>
-					<a id="contact" className="menu-item" href="/contact">
+					<a id="contact" className="menu-item" href="#">
 						<i className="far fa-envelope" style={iconStyle} />Contact Me
 					</a>
 					<a
