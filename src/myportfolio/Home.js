@@ -64,10 +64,13 @@ const Home = () => {
 		marginRight: '24px',
 		marginTop: '5px'
 	};
+
 	return (
 		<div
 			style={{
-				background: 'whitesmoke',
+				background: 'rgb(2,0,36)',
+				background:
+					'linear-gradient(308deg, rgba(2,0,36,1) 0%, rgba(108,7,15,1) 0%, rgba(121,9,28,1) 12%, rgba(67,4,119,1) 69%, rgba(26,21,135,1) 100%)',
 				overflow: 'hidden'
 			}}
 		>

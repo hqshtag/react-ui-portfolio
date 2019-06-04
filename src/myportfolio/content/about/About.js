@@ -26,17 +26,24 @@ function About() {
 		margin: '15px'
 		//color: 'red'
 	};
+
+	const emph = {
+		color: getRandomFrom(vividColor),
+		fontWeight: 'bold'
+	};
 	return (
 		<div className="about card" style={styleCard}>
 			<h1 className="card-title" style={styleTitle}>
 				About me
 			</h1>
 			<p className="about-paragraph" style={styleP}>
-				I'm a web developer, I have High-School Diploma major Computer Science and Studying to get a Higher
-				National Diploma in software development. I'm a self-taught programmer, currently specializing in full
-				stack web development. <br />
-				I'm excellent in algorithms, problem solving and understanding new concepts. I'm a quick learner and I
-				learn something new everyday and I won't have a problem with learning new programming languages. <br />
+				Hey, I'm a <span style={emph}>self-taught programmer</span>, currently specializing in web development.
+				I have 4 years of experience in <span style={emph}>full stack</span> development. I'm a hardcode
+				developer and go by "simple and efficient" in the design departement. <br />
+				I aim to build <span style={emph}>fast</span>, fully responsive{' '}
+				<span style={emph}>webapps and REST APIS</span> with many different tools and frameworks; you can check
+				my skill set below and if you can't find what your are looking for then contact me because I probably
+				learned that already and didn't upload this yet. <br />
 			</p>
 		</div>
 	);
@@ -45,7 +52,9 @@ function About() {
 export default About;
 
 //helper
-/*
+
 const getRandomFrom = (Array) => {
 	return Array[Math.floor(Math.random() * Array.length)];
-};*/
+};
+
+const vividColor = [ '#6FDA44', '#faff00', '#54ff00', '#ff0077', '#00fffa', '#00ff87', '#ff00ff' ];

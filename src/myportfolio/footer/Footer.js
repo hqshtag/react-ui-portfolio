@@ -3,7 +3,7 @@ import React from 'react';
 function Footer() {
 	const footerStyle = {
 		background: 'black',
-		margin: '20px 10px 0px',
+		margin: '20px 0px 0px',
 
 		color: 'white',
 		fontSize: '26px',
