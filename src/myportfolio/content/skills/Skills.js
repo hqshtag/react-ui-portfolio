@@ -25,7 +25,7 @@ class Skills extends React.Component {
 			return <SkillCard data={elem} key={key} />;
 		});
 
-		const primary = '#ee192d';
+		const primary = 'rgb(169, 19, 19)';
 		const secondary = '#fee9eb';
 
 		const cardStyle = {
