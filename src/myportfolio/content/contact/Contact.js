@@ -8,7 +8,7 @@ import { push as Menu } from 'react-burger-menu';
 //import './contact.css';
 
 //very obvious; vo
-//const API = 'http://localhost/contact-form-api/log-messages-api.php';
+const API = 'http://wtsandbox.epizy.com/contact-form-api/log-messages-api.php';
 
 export default class Contact extends React.Component {
 	constructor(props) {
