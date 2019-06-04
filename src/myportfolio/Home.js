@@ -16,10 +16,10 @@ const Home = () => {
 			top: '36px'
 		},
 		bmBurgerBars: {
-			background: '#373a47'
+			background: '#dadada'
 		},
 		bmBurgerBarsHover: {
-			background: '#a90000'
+			background: 'white'
 		},
 		bmCrossButton: {
 			height: '24px',
