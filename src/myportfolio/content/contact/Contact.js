@@ -23,7 +23,7 @@ export default class Contact extends React.Component {
 		};
 	}
 
-	/*handleSubmit = (event) => {
+	/**/ handleSubmit = (event) => {
 		event.preventDefault();
 		const data = {
 			name: this.state.name,
@@ -53,7 +53,7 @@ export default class Contact extends React.Component {
 					};
 				});
 			});
-	};*/
+	}; /**/
 
 	handleChange = (event) => {
 		let { name, value } = event.target;
@@ -137,7 +137,7 @@ export default class Contact extends React.Component {
 			marginTop: '5px'
 		};
 		//thefollowingline's original positon : L160
-		//handleSubmit={this.handleSubmit}
+		//
 		return (
 			<div id="outer-container">
 				<Menu pageWrapId={'page-wrap'} outerContainerId={'outer-container'} styles={styles}>
@@ -155,7 +155,12 @@ export default class Contact extends React.Component {
 						) : (
 							<Error name={this.state.name} />
 						) : (
-							<ContactForm handleChange={this.handleChange} data={this.state} capName={capName} />
+							<ContactForm
+								handleChange={this.handleChange}
+								handleSubmit={this.handleSubmit}
+								data={this.state}
+								capName={capName}
+							/>
 						) /**/}
 					</div>
 				</main>

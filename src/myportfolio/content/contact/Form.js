@@ -66,13 +66,7 @@ function ContactForm(props) {
 	};
 
 	return (
-		<form
-			className="form"
-			method="POST"
-			netlify
-			data-netlify="true"
-			/*  onSubmit={props.handleSubmit}*/ style={formStyle}
-		>
+		<form className="form" method="POST" onSubmit={props.handleSubmit} style={formStyle}>
 			<h1 className="form-title" style={titleStyle}>
 				Send me an email
 			</h1>
