@@ -9,9 +9,7 @@ function Header(props) {
 		//marginTop: '32vh',
 		width: '92%',
 		justifyContent: 'flex-end',
-		background: 'rgb(2,0,36)',
-		background:
-			'linear-gradient(308deg, rgba(2,0,36,1) 0%, rgba(108,7,15,1) 0%, rgba(121,9,28,1) 12%, rgba(67,4,119,1) 69%, rgba(26,21,135,1) 100%)',
+		color: '#dadada',
 		paddingRight: '90px',
 		margin: '0px 10px 20px 10px'
 	};
